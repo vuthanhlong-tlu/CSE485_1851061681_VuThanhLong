@@ -48,6 +48,7 @@
                                 echo "<thead>";
                                     echo "<tr>";
                                         echo "<th>#</th>";
+                                        echo "<th>username</th>";
                                         echo "<th>email</th>";
                                         echo "<th>password</th>";
                                        
@@ -57,13 +58,14 @@
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
-                                        echo "<td>" . $row['userid'] . "</td>";
+                                        echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['username'] . "</td>";
                                         echo "<td>" . $row['email'] . "</td>";
                                         echo "<td>" . $row['password'] . "</td>";
                                         echo "<td>";
-                                            echo "<a href='viewthongtincanhan.php?id=". $row['userid'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
-                                            echo "<a href='aaa.php?id=". $row['userid'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                            echo "<a href='deletethongtincanhan.php?id=". $row['userid'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a href='viewthongtincanhan.php?id=". $row['id'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                            echo "<a href='aaa.php?id=". $row['id'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
+                                            echo "<a href='deletengdung.php?id=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
                                     echo "</tr>";
                                 }

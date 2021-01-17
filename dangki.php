@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Signup</title>
+    <title>Đăng Kí</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,25 +12,33 @@
   </head>
 
   <body>
+  
       <h1>Đăng kí</h1>
-      <form  action="register_submit.php" method="post">
+      <form  action="xulydangnhap.php" method="post">
 
         <div class="form-group">
             <label for="username">Tên</label>
-            <input type="text" name="username1" id="username1" class="form-control"  >
+            <input type="text" name="username" id="username" class="form-control"  >
         </div>
+
         <div class="form-group">
-            <label for="email">email</label>
+            <label for="email">Email</label>
             <input type="text" name="email" id="email" class="form-control"  >
-        </div>        
+        </div>
+
+
         <div class="form-group">
-            <label for="password">password</label>
+            <label for="password">Password</label>
             <input type="text" name="password" id="password" class="form-control"  >
         </div>
+
+        
+
         <div class="form-group">
-            <label for="repassword">repassword</label>
+            <label for="repassword">Nhập lại password</label>
             <input type="text" name="repassword" id="repassword" class="form-control"  >
         </div>
+
         <button class="btn btn-primary">Đăng kí
         </button>
         <button class="btn btn-primary">Thoát</button>

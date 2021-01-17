@@ -24,14 +24,14 @@ session_start();
 		if ($email == "" || $password =="") {
 			echo "username hoặc password bạn không được để trống!";
 		}else{
-			$sql = "select * from users where username = '$email' and password = '$password' ";
+			$sql = "select * from users where email = '$email' and password = '$password' ";
 			$query = mysqli_query($conn,$sql);
 			$num_rows = mysqli_num_rows($query);
 			if ($num_rows==0) {
 				echo "tên đăng nhập hoặc mật khẩu không đúng !";
 			}else{
 				//tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
-				$_SESSION['username'] = $email;
+				$_SESSION['email'] = $email;
                 // Thực thi hành động sau khi lưu thông tin vào session
                 // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
                 header('Location: admin.php');
@@ -54,6 +54,7 @@ session_start();
 	    		<tr>
 	    			<td colspan="2" align="center"> <input name="btn_submit" type="submit" value="Đăng nhập"></td>
 	    		</tr>
+				<div class="page-header clearfix"> <a href="dangki.php" class="btn btn-success pull right">Đăng Kí</a> </div>
 	    	</table>
   </fieldset>
   </form>
